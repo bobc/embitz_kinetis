@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resource>
+	<object class="wxPanel" name="INTERFACE_PANEL_ROOT">
+		<size>253,321</size>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<object class="wxNotebook" name="nbMain">
+					<object class="notebookpage">
+						<object class="wxPanel" name="ID_PANEL_3">
+							<style>0</style>
+							<object class="wxFlexGridSizer">
+								<cols>2</cols>
+								<rows>10</rows>
+								<vgap>4</vgap>
+								<growablecols>0</growablecols>
+								<object class="sizeritem">
+									<object class="wxStaticText" name="ID_STATICTEXT4">
+										<label>Device</label>
+									</object>
+									<flag>wxTOP|wxLEFT|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+									<border>3</border>
+								</object>
+								<object class="sizeritem">
+									<object class="wxComboBox" name="ID_DEVICE">
+										<content>
+<item>MK02FN128xxx10</item>
+<item>MK02FN64xxx10</item>
+<item>MK10DN512xxx10</item>
+<item>MK10DX128xxx10</item>
+<item>MK10DX256xxx10</item>
+<item>MK10DN128xxx5</item>
+<item>MK10DN32xxx5</item>
+<item>MK10DN64xxx5</item>
+<item>MK10DX128xxx5</item>
+<item>MK10DX32xxx5</item>
+<item>MK10DX64xxx5</item>
+<item>MK10DX128xxx7</item>
+<item>MK10DX256xxx7</item>
+<item>MK10DX64xxx7</item>
+<item>MK10DN512Zxxx10</item>
+<item>MK10DX128Zxxx10</item>
+<item>MK10DX256Zxxx10</item>
+<item>MK10FN1M0xxx12</item>
+<item>MK10FX512xxx12</item>
+<item>MK11DN512xxx5</item>
+<item>MK11DX128xxx5</item>
+<item>MK11DX256xxx5</item>
+<item>MK11DN512Axxx5</item>
+<item>MK11DX128Axxx5</item>
+<item>MK11DX256Axxx5</item>
+<item>MK12DN512xxx5</item>
+<item>MK12DX128xxx5</item>
+<item>MK12DX256xxx5</item>
+<item>MK20DN512xxx10</item>
+<item>MK20DX128xxx10</item>
+<item>MK20DX256xxx10</item>
+<item>MK20DN128xxx5</item>
+<item>MK20DN32xxx5</item>
+<item>MK20DN64xxx5</item>
+<item>MK20DX128xxx5</item>
+<item>MK20DX32xxx5</item>
+<item>MK20DX64xxx5</item>
+<item>MK20DX128xxx7</item>
+<item>MK20DX256xxx7</item>
+<item>MK20DX64xxx7</item>
+<item>MK20DN512Zxxx10</item>
+<item>MK20DX128Zxxx10</item>
+<item>MK20DX256Zxxx10</item>
+<item>MK20FN1M0xxx12</item>
+<item>MK20FX512xxx12</item>
+<item>MK21DN512xxx5</item>
+<item>MK21DX128xxx5</item>
+<item>MK21DX256xxx5</item>
+<item>MK21DN512Axxx5</item>
+<item>MK21DX128Axxx5</item>
+<item>MK21DX256Axxx5</item>
+<item>MK21FN1M0xxx12</item>
+<item>MK21FX512xxx12</item>
+<item>MK21FN1M0Axxx12</item>
+<item>MK21FX512Axxx12</item>
+<item>MK22DN512xxx5</item>
+<item>MK22DX128xxx5</item>
+<item>MK22DX256xxx5</item>
+<item>MK22FN1M0xxx12</item>
+<item>MK22FX512xxx12</item>
+<item>MK22FN128xxx10</item>
+<item>MK22FN128xxx12</item>
+<item>MK22FN256xxx12</item>
+<item>MK22FN512xxx12</item>
+<item>MK22FN1M0Axxx12</item>
+<item>MK22FX512Axxx12</item>
+<item>MK24FN1M0xxx12</item>
+<item>MK24FN256xxx12</item>
+<item>MK26FN2M0xxx18</item>
+<item>MK30DN512xxx10</item>
+<item>MK30DX128xxx10</item>
+<item>MK30DX256xxx10</item>
+<item>MK30DX128xxx7</item>
+<item>MK30DX256xxx7</item>
+<item>MK30DX64xxx7</item>
+<item>MK30DN512Zxxx10</item>
+<item>MK30DX128Zxxx10</item>
+<item>MK30DX256Zxxx10</item>
+<item>MK40DN512xxx10</item>
+<item>MK40DX128xxx10</item>
+<item>MK40DX256xxx10</item>
+<item>MK40DX128xxx7</item>
+<item>MK40DX256xxx7</item>
+<item>MK40DX64xxx7</item>
+<item>MK40DN512Zxxx10</item>
+<item>MK40DX128Zxxx10</item>
+<item>MK40DX256Zxxx10</item>
+<item>MK50DN512xxx10</item>
+<item>MK50DX256xxx10</item>
+<item>MK50DX128xxx7</item>
+<item>MK50DX256xxx7</item>
+<item>MK50DN512Zxxx10</item>
+<item>MK50DX256Zxxx10</item>
+<item>MK51DN256xxx10</item>
+<item>MK51DN512xxx10</item>
+<item>MK51DX256xxx10</item>
+<item>MK51DX128xxx7</item>
+<item>MK51DX256xxx7</item>
+<item>MK51DN256Zxxx10</item>
+<item>MK51DN512Zxxx10</item>
+<item>MK51DX256Zxxx10</item>
+<item>MK52DN512xxx10</item>
+<item>MK52DN512Zxxx10</item>
+<item>MK53DN512xxx10</item>
+<item>MK53DX256xxx10</item>
+<item>MK53DN512Zxxx10</item>
+<item>MK53DX256Zxxx10</item>
+<item>MK60DN256xxx10</item>
+<item>MK60DN512xxx10</item>
+<item>MK60DX256xxx10</item>
+<item>MK60DN256Zxxx10</item>
+<item>MK60DN512Zxxx10</item>
+<item>MK60DX256Zxxx10</item>
+<item>MK60FN1M0xxx12</item>
+<item>MK60FN1M0xxx15</item>
+<item>MK60FX512xxx12</item>
+<item>MK60FX512xxx15</item>
+<item>MK60FN1M0xxx12</item>
+<item>MK60FN1M0xxx15</item>
+<item>MK60FX512xxx12</item>
+<item>MK60FX512xxx15</item>
+<item>MK61FN1M0xxx12</item>
+<item>MK61FN1M0xxx15</item>
+<item>MK61FX512xxx12</item>
+<item>MK61FX512xxx15</item>
+<item>MK61FN1M0xxx12</item>
+<item>MK61FN1M0xxx15</item>
+<item>MK61FX512xxx12</item>
+<item>MK61FX512xxx15</item>
+<item>MK63FN1M0xxx12</item>
+<item>MK64FN1M0xxx12</item>
+<item>MK64FX512xxx12</item>
+<item>MK65FN2M0xxx18</item>
+<item>MK65FX1M0xxx18</item>
+<item>MK66FN2M0xxx18</item>
+<item>MK66FX1M0xxx18</item>
+<item>MK70FN1M0xxx12</item>
+<item>MK70FN1M0xxx15</item>
+<item>MK70FX512xxx12</item>
+<item>MK70FX512xxx15</item>
+<item>MK70FN1M0xxx12</item>
+<item>MK70FN1M0xxx15</item>
+<item>MK70FX512xxx12</item>
+<item>MK70FX512xxx15</item>
+<item>MK80FN256xxx15</item>
+<item>MKE02Z16xxx2</item>
+<item>MKE02Z16xxx4</item>
+<item>MKE02Z32xxx2</item>
+<item>MKE02Z32xxx4</item>
+<item>MKE02Z64xxx2</item>
+<item>MKE02Z64xxx4</item>
+<item>SKEAZN16xxx2</item>
+<item>SKEAZN32xxx2</item>
+<item>SKEAZN64xxx2</item>
+<item>MKE02Z16xxx2</item>
+<item>MKE02Z16xxx4</item>
+<item>MKE02Z32xxx2</item>
+<item>MKE02Z32xxx4</item>
+<item>MKE02Z64xxx2</item>
+<item>MKE02Z64xxx4</item>
+<item>SKEAZN16xxx2</item>
+<item>SKEAZN32xxx2</item>
+<item>SKEAZN64xxx2</item>
+<item>MKE04Z128xxx4</item>
+<item>MKE04Z64xxx4</item>
+<item>MKE04Z8xxx4</item>
+<item>SKEAZN8xxx4</item>
+<item>MKE06Z128xxx4</item>
+<item>MKE06Z64xxx4</item>
+<item>MKL02Z16xxx4</item>
+<item>MKL02Z32xxx4</item>
+<item>MKL02Z8xxx4</item>
+<item>MKL03Z16xxx4</item>
+<item>MKL03Z32xxx4</item>
+<item>MKL03Z8xxx4</item>
+<item>MKL04Z16xxx4</item>
+<item>MKL04Z32xxx4</item>
+<item>MKL04Z8xxx4</item>
+<item>MKL05Z16xxx4</item>
+<item>MKL05Z32xxx4</item>
+<item>MKL05Z8xxx4</item>
+<item>MKL13Z32xxx4</item>
+<item>MKL13Z32xxx4</item>
+<item>MKL13Z64xxx4</item>
+<item>MKL13Z64xxx4</item>
+<item>MKL14Z32xxx4</item>
+<item>MKL14Z64xxx4</item>
+<item>MKL15Z128xxx4</item>
+<item>MKL15Z32xxx4</item>
+<item>MKL15Z64xxx4</item>
+<item>MKL16Z128xxx4</item>
+<item>MKL16Z256xxx4</item>
+<item>MKL16Z32xxx4</item>
+<item>MKL16Z64xxx4</item>
+<item>MKL17Z128xxx4</item>
+<item>MKL17Z256xxx4</item>
+<item>MKL17Z32xxx4</item>
+<item>MKL17Z64xxx4</item>
+<item>MKL24Z32xxx4</item>
+<item>MKL24Z64xxx4</item>
+<item>MKL25Z128xxx4</item>
+<item>MKL25Z32xxx4</item>
+<item>MKL25Z64xxx4</item>
+<item>MKL26Z128xxx4</item>
+<item>MKL26Z256xxx4</item>
+<item>MKL26Z32xxx4</item>
+<item>MKL26Z64xxx4</item>
+<item>MKL27Z128xxx4</item>
+<item>MKL27Z256xxx4</item>
+<item>MKL27Z32xxx4</item>
+<item>MKL27Z64xxx4</item>
+<item>MKL33Z128xxx4</item>
+<item>MKL33Z256xxx4</item>
+<item>MKL33Z32xxx4</item>
+<item>MKL33Z32xxx4</item>
+<item>MKL33Z64xxx4</item>
+<item>MKL33Z64xxx4</item>
+<item>MKL34Z64xxx4</item>
+<item>MKL36Z128xxx4</item>
+<item>MKL36Z256xxx4</item>
+<item>MKL36Z64xxx4</item>
+<item>MKL43Z128xxx4</item>
+<item>MKL43Z256xxx4</item>
+<item>MKL43Z64xxx4</item>
+<item>MKL46Z128xxx4</item>
+<item>MKL46Z256xxx4</item>
+<item>MKM34Z256xxx7</item>
+<item>MKM34Z256xxx7</item>
+<item>MKV10Z128xxx7</item>
+<item>MKV10Z128xxx7</item>
+<item>MKV10Z64xxx7</item>
+<item>MKV10Z64xxx7</item>
+<item>MKV10Z16xxx7</item>
+<item>MKV10Z16xxx7</item>
+<item>MKV10Z32xxx7</item>
+<item>MKV10Z32xxx7</item>
+<item>MKV11Z128xxx7</item>
+<item>MKV11Z128xxx7</item>
+<item>MKV11Z64xxx7</item>
+<item>MKV11Z64xxx7</item>
+<item>MKV30F128xxx10</item>
+<item>MKV30F64xxx10</item>
+<item>MKV31F128xxx10</item>
+<item>MKV31F256xxx12</item>
+<item>MKV31F512xxx12</item>
+<item>MKV40F128xxx15</item>
+<item>MKV40F128xxx15</item>
+<item>MKV40F256xxx15</item>
+<item>MKV40F256xxx15</item>
+<item>MKV40F64xxx15</item>
+<item>MKV40F64xxx15</item>
+<item>MKV43F128xxx15</item>
+<item>MKV43F128xxx15</item>
+<item>MKV43F64xxx15</item>
+<item>MKV43F64xxx15</item>
+<item>MKV44F128xxx15</item>
+<item>MKV44F128xxx15</item>
+<item>MKV44F64xxx15</item>
+<item>MKV44F64xxx15</item>
+<item>MKV45F128xxx15</item>
+<item>MKV45F128xxx15</item>
+<item>MKV45F256xxx15</item>
+<item>MKV45F256xxx15</item>
+<item>MKV46F128xxx15</item>
+<item>MKV46F128xxx15</item>
+<item>MKV46F256xxx15</item>
+<item>MKV46F256xxx15</item>
+<item>MKW01Z128xxx4</item>
+<item>MKW01Z128xxx4</item>
+<item>MKW20Z160xxx4</item>
+<item>MKW20Z160xxx4</item>
+<item>MKW21D256xxx5</item>
+<item>MKW21D512xxx5</item>
+<item>MKW22D512xxx5</item>
+<item>MKW24D512xxx5</item>
+<item>MKW30Z160xxx4</item>
+<item>MKW30Z160xxx4</item>
+<item>MKW40Z160xxx4</item>
+<item>MKW40Z160xxx4</item>
+<item>SKEAZ128xxx4</item>
+<item>SKEAZ64xxx4</item>
+<item>MKE02Z16xxx2</item>
+<item>MKE02Z16xxx4</item>
+<item>MKE02Z32xxx2</item>
+<item>MKE02Z32xxx4</item>
+<item>MKE02Z64xxx2</item>
+<item>MKE02Z64xxx4</item>
+<item>SKEAZN16xxx2</item>
+<item>SKEAZN32xxx2</item>
+<item>SKEAZN64xxx2</item>
+<item>MKE04Z8xxx4</item>
+<item>SKEAZN8xxx4</item>
+										</content>
+										<size>120,21</size>
+									</object>
+									<flag>wxTOP|wxBOTTOM|wxRIGHT|wxEXPAND|wxALIGN_LEFT|wxALIGN_TOP</flag>
+									<border>3</border>
+								</object>
+								<object class="sizeritem">
+									<object class="wxStaticText" name="ID_STATICTEXT6">
+										<label>Interface</label>
+									</object>
+									<flag>wxLEFT|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+									<border>3</border>
+								</object>
+								<object class="sizeritem">
+									<object class="wxChoice" name="ID_JTAG_SWD">
+										<content>
+											<item>jtag</item>
+											<item>swd</item>
+										</content>
+										<selection>0</selection>
+									</object>
+									<flag>wxRIGHT|wxEXPAND|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+									<border>3</border>
+								</object>
+								<object class="sizeritem">
+									<object class="wxStaticText" name="ID_STATICTEXT7">
+										<label>Jtag Speed</label>
+									</object>
+									<flag>wxLEFT|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+									<border>3</border>
+								</object>
+								<object class="sizeritem">
+									<object class="wxTextCtrl" name="ID_SPEED" />
+									<flag>wxRIGHT|wxEXPAND|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+									<border>3</border>
+								</object>
+								<object class="sizeritem">
+									<object class="wxStaticText" name="ID_STATICTEXT1">
+										<label></label>
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>5</border>
+									<option>1</option>
+								</object>
+								<object class="sizeritem">
+									<object class="wxCheckBox" name="ID_AUTO_SPEED">
+										<label>Auto speed</label>
+									</object>
+									<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+									<border>3</border>
+								</object>
+								<object class="sizeritem">
+									<object class="wxStaticText" name="ID_STATICTEXT8">
+										<label>Endianness</label>
+									</object>
+									<flag>wxLEFT|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+									<border>3</border>
+								</object>
+								<object class="sizeritem">
+									<object class="wxChoice" name="ID_ENDIANNESS">
+										<content>
+											<item>little</item>
+											<item>big</item>
+										</content>
+										<selection>0</selection>
+									</object>
+									<flag>wxRIGHT|wxEXPAND|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+									<border>3</border>
+								</object>
+								<object class="sizeritem">
+									<object class="wxStaticText" name="ID_STATICTEXT9">
+										<label>Reset type</label>
+									</object>
+									<flag>wxLEFT|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+									<border>3</border>
+								</object>
+								<object class="sizeritem">
+									<object class="wxChoice" name="ID_RESET_TYPE">
+										<content>
+											<item>0</item>
+											<item>1</item>
+											<item>2</item>
+											<item>3</item>
+											<item>4</item>
+											<item>5</item>
+											<item>6</item>
+											<item>7</item>
+											<item>8</item>
+											<item>9</item>
+											<item>10</item>
+										</content>
+										<selection>0</selection>
+									</object>
+									<flag>wxRIGHT|wxEXPAND|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+									<border>3</border>
+								</object>
+								<object class="sizeritem">
+									<object class="wxStaticText" name="ID_STATICTEXT10">
+										<label>Vector table start</label>
+									</object>
+									<flag>wxLEFT|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+									<border>3</border>
+								</object>
+								<object class="sizeritem">
+									<object class="wxTextCtrl" name="ID_VECTOR_START" />
+									<flag>wxRIGHT|wxEXPAND|wxALIGN_LEFT|wxALIGN_TOP</flag>
+									<border>3</border>
+								</object>
+								<object class="sizeritem">
+									<object class="wxCheckBox" name="ID_LOAD_PROGRAM">
+										<label>Load progam</label>
+									</object>
+									<flag>wxTOP|wxLEFT|wxALIGN_LEFT|wxALIGN_TOP</flag>
+									<border>3</border>
+									<option>1</option>
+								</object>
+								<object class="sizeritem">
+									<object class="wxStaticText" name="ID_STATICTEXT3">
+										<label></label>
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>5</border>
+									<option>1</option>
+								</object>
+								<object class="sizeritem">
+									<object class="wxCheckBox" name="ID_FLASH_DOWNLOAD">
+										<label>Flash download</label>
+									</object>
+									<flag>wxTOP|wxLEFT|wxALIGN_LEFT|wxALIGN_TOP</flag>
+									<border>3</border>
+								</object>
+								<object class="sizeritem">
+									<object class="wxStaticText" name="ID_STATICTEXT2">
+										<label></label>
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>5</border>
+									<option>1</option>
+								</object>
+								<object class="sizeritem">
+									<object class="wxCheckBox" name="ID_FLASH_BREAK">
+										<label>Flash breakpoints</label>
+									</object>
+									<flag>wxTOP|wxLEFT|wxALIGN_LEFT|wxALIGN_TOP</flag>
+									<border>3</border>
+								</object>
+								<object class="sizeritem">
+									<object class="wxStaticText" name="ID_STATICTEXT5">
+										<label></label>
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>5</border>
+									<option>1</option>
+								</object>
+								<object class="sizeritem">
+									<object class="wxCheckBox" name="ID_RAM_EXEC">
+										<label>Execute from RAM</label>
+										<tooltip>Checkk this box if the program must&#x0A;execute from RAM.</tooltip>
+									</object>
+									<flag>wxTOP|wxLEFT|wxALIGN_LEFT|wxALIGN_TOP</flag>
+									<border>3</border>
+								</object>
+								<object class="sizeritem">
+									<object class="wxStaticText" name="ID_STATICTEXT11">
+										<label></label>
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>5</border>
+									<option>1</option>
+								</object>
+								<object class="sizeritem">
+									<object class="wxCheckBox" name="ID_VEC_TABLE">
+										<label>Relocate vector table</label>
+									</object>
+									<flag>wxBOTTOM|wxLEFT|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>3</border>
+								</object>
+							</object>
+						</object>
+						<label>Settings</label>
+					</object>
+					<object class="notebookpage">
+						<object class="wxPanel" name="tabExtras">
+							<object class="wxBoxSizer">
+								<orient>wxVERTICAL</orient>
+								<object class="sizeritem">
+									<object class="wxStaticBoxSizer">
+										<label>Non-Cacheable region</label>
+										<orient>wxVERTICAL</orient>
+										<object class="sizeritem">
+											<object class="wxFlexGridSizer">
+												<cols>2</cols>
+												<rows>2</rows>
+												<object class="sizeritem">
+													<object class="wxStaticText" name="ID_STATICTEXT14">
+														<label></label>
+													</object>
+													<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+													<border>5</border>
+													<option>1</option>
+												</object>
+												<object class="sizeritem">
+													<object class="wxCheckBox" name="ID_NCACHE_CHECK">
+														<label>Disable Cache</label>
+													</object>
+													<flag>wxTOP|wxBOTTOM|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+													<border>10</border>
+													<option>1</option>
+												</object>
+												<object class="sizeritem">
+													<object class="wxStaticText" name="ID_STATICTEXT12">
+														<label>Base address</label>
+													</object>
+													<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+													<border>5</border>
+													<option>1</option>
+												</object>
+												<object class="sizeritem">
+													<object class="wxTextCtrl" name="ID_NCACHE_BASE" />
+													<flag>wxTOP|wxBOTTOM|wxLEFT|wxEXPAND|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+													<border>5</border>
+													<option>1</option>
+												</object>
+												<object class="sizeritem">
+													<object class="wxStaticText" name="ID_STATICTEXT13">
+														<label>Length</label>
+													</object>
+													<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+													<border>5</border>
+													<option>1</option>
+												</object>
+												<object class="sizeritem">
+													<object class="wxTextCtrl" name="ID_NCACHE_LENGTH" />
+													<flag>wxBOTTOM|wxLEFT|wxEXPAND|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+													<border>5</border>
+													<option>1</option>
+												</object>
+											</object>
+											<flag>wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+											<border>3</border>
+											<option>1</option>
+										</object>
+									</object>
+									<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>15</border>
+									<option>1</option>
+								</object>
+								<object class="spacer">
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>5</border>
+									<option>1</option>
+								</object>
+							</object>
+						</object>
+						<label>Flash cache</label>
+					</object>
+					<object class="notebookpage">
+						<object class="wxPanel" name="ID_PANEL1">
+							<object class="wxBoxSizer">
+								<orient>wxVERTICAL</orient>
+								<object class="sizeritem">
+									<object class="wxCheckBox" name="ID_SEMIHOST_CHECK">
+										<label>Enable Semihosting</label>
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>15</border>
+								</object>
+								<object class="sizeritem">
+									<object class="wxStaticBoxSizer">
+										<label>Alternative settings</label>
+										<orient>wxVERTICAL</orient>
+										<object class="sizeritem">
+											<object class="wxFlexGridSizer">
+												<cols>2</cols>
+												<rows>2</rows>
+												<object class="sizeritem">
+													<object class="wxStaticText" name="ID_STATICTEXT16">
+														<label>ArmSWI</label>
+													</object>
+													<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+													<border>5</border>
+													<option>1</option>
+												</object>
+												<object class="sizeritem">
+													<object class="wxTextCtrl" name="ID_ARM_SWI" />
+													<flag>wxTOP|wxBOTTOM|wxLEFT|wxEXPAND|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+													<border>5</border>
+													<option>1</option>
+												</object>
+												<object class="sizeritem">
+													<object class="wxStaticText" name="ID_STATICTEXT17">
+														<label>ThumbSWI</label>
+													</object>
+													<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+													<border>5</border>
+													<option>1</option>
+												</object>
+												<object class="sizeritem">
+													<object class="wxTextCtrl" name="ID_THUMB_SWI" />
+													<flag>wxBOTTOM|wxLEFT|wxEXPAND|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+													<border>5</border>
+													<option>1</option>
+												</object>
+											</object>
+											<flag>wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+											<border>3</border>
+											<option>1</option>
+										</object>
+									</object>
+									<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>5</border>
+									<option>1</option>
+								</object>
+								<object class="spacer">
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>5</border>
+									<option>1</option>
+								</object>
+							</object>
+						</object>
+						<label>Semihosting</label>
+					</object>
+				</object>
+				<flag>wxALIGN_LEFT|wxALIGN_TOP</flag>
+			</object>
+		</object>
+	</object>
+</resource>

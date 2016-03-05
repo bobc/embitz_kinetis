@@ -1,0 +1,54 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+// EmBitz main debug interface configuration script.
+//
+////////////////////////////////////////////////////////////////////////////////
+
+
+
+/////////////////////////////////////////////////////////////
+//
+//  Called by EmBitz to get the available interfaces
+//
+function RegisterInterfaces()
+{
+    //  The Generic script (raw interfacing)
+    RegisterInterface( _T("Generic"),  _T("All"),               _T("generic"),       _T("arm-gdb.exe;msp430-gdb.exe;avr-gdb.exe"));
+
+    //  The ST-Link scripts
+    RegisterInterface( _T("ST-link"),  _T("STMicroelectronics"),_T("stlink"),        _T("arm-gdb.exe"));
+
+    RegisterInterface( _T("OpenOCD"),  _T("All"),               _T("openOCD"),       _T("arm-gdb.exe;msp430-gdb.exe;avr-gdb.exe"));
+
+    //  The J-Link scripts
+    RegisterInterface( _T("J-link"),  _T("Generic"),            _T("jlink/generic"),   _T("arm-gdb.exe"));
+    RegisterInterface( _T("J-link"),  _T("NXP"),                _T("jlink/nxp"),       _T("arm-gdb.exe"));
+    RegisterInterface( _T("J-link"),  _T("Energy Micro"),       _T("jlink/em"),        _T("arm-gdb.exe"));
+    RegisterInterface( _T("J-link"),  _T("STMicroelectronics"), _T("jlink/st"),        _T("arm-gdb.exe"));
+//    RegisterInterface( _T("J-link"),  _T("Freescale"),          _T("jlink/freescale"), _T("arm-gdb.exe"));
+    RegisterInterface( _T("J-link"),  _T("Kinetis"),            _T("jlink/kinetis"),   _T("arm-gdb.exe"));
+    RegisterInterface( _T("J-link"),  _T("Atmel"),              _T("jlink/atmel"),     _T("arm-gdb.exe"));
+    RegisterInterface( _T("J-link"),  _T("Nordic"),             _T("jlink/nordic"),    _T("arm-gdb.exe"));
+
+    //  The MSP430 scripts
+    RegisterInterface( _T("MSP430"),  _T("msp-debug"),  _T("mspdebug"),        _T("msp430-gdb.exe"));
+ //   RegisterInterface( _T("MSP430"),  _T("GDBproxy++"), _T("gdbproxy"),        _T("msp430-gdb.exe"));
+}
+
+
+/////////////////////////////////////////////////////////////
+//
+// Internal script function
+//
+function RegisterInterface(name, family, scrFolder, debuggers)
+{
+
+    //  syntax:
+    //      dbginterface.AddInterface(name, family, debuggers, interface_png, interface_script, interface_xrc)
+    dbginterface.AddInterface(name,
+			      family,
+                              debuggers,
+			      scrFolder + _T("/interface.png"),
+                              scrFolder + _T("/interface.script"),
+                              scrFolder + _T("/interface.xrc"));
+}

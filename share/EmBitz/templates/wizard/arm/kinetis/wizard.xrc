@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resource>
+	<object class="wxPanel" name="deviceChoice">
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<object class="wxStaticText" name="textDeviceChoice">
+					<label>Please choose a device for this project...</label>
+				</object>
+				<flag>wxALL|wxEXPAND|wxALIGN_LEFT|wxALIGN_TOP</flag>
+				<border>3</border>
+			</object>
+			<object class="sizeritem">
+				<object class="wxComboBox" name="comboboxDevice">
+					<content>
+						<item>MK10DN32VFM5&#x09;&#x09;</item>
+						<item>MK10DX32VFM5&#x09;&#x09;</item>
+						<item>MK10DN64VFM5&#x09;&#x09;</item>
+						<item>MK10DX64VFM5&#x09;&#x09;</item>
+						<item>MK10DN128VFM5&#x09;&#x09;</item>
+						<item>MK10DX128VFM5&#x09;&#x09;</item>
+						<item>MK10DN32VLF5&#x09;&#x09;</item>
+						<item>MK10DX32VLF5&#x09;&#x09;</item>
+						<item>MK10DN64VLF5&#x09;&#x09;</item>
+						<item>MK10DX64VLF5&#x09;&#x09;</item>
+						<item>MK10DN128VLF5&#x09;&#x09;</item>
+						<item>MK10DX128VLF5&#x09;&#x09;</item>
+						<item>MK10DN32VFT5&#x09;&#x09;</item>
+						<item>MK10DX32VFT5&#x09;&#x09;</item>
+						<item>MK10DN64VFT5&#x09;&#x09;</item>
+						<item>MK10DX64VFT5&#x09;&#x09;</item>
+						<item>MK10DN128VFT5&#x09;&#x09;</item>
+						<item>MK10DX128VFT5&#x09;&#x09;</item>
+						<item>MK10DN32VLH5&#x09;&#x09;</item>
+						<item>MK10DX32VLH5&#x09;&#x09;</item>
+						<item>MK10DN64VLH5&#x09;&#x09;</item>
+						<item>MK10DX64VLH5&#x09;&#x09;</item>
+						<item>MK10DN128VLH5&#x09;&#x09;</item>
+						<item>MK10DX128VLH5&#x09;&#x09;</item>
+						<item>MK10DN32VMP5&#x09;&#x09;</item>
+						<item>MK10DX32VMP5&#x09;&#x09;</item>
+						<item>MK10DN64VMP5&#x09;&#x09;</item>
+						<item>MK10DX64VMP5&#x09;&#x09;</item>
+						<item>MK10DN128VMP5&#x09;&#x09;</item>
+						<item>MK10DX128VMP5&#x09;&#x09;</item>
+						<item>MK10DX64VLH7&#x09;&#x09;</item>
+						<item>MK10DX128VLH7&#x09;&#x09;</item>
+						<item>MK10DX256VLH7&#x09;&#x09;</item>
+						<item>MK10DX64VLK7&#x09;&#x09;</item>
+						<item>MK10DX128VLK7&#x09;&#x09;</item>
+						<item>MK10DX256VLK7&#x09;&#x09;</item>
+						<item>MK10DX128VLL7&#x09;&#x09;</item>
+						<item>MK10DX256VLL7&#x09;&#x09;</item>
+						<item>MK10DX64VMC7&#x09;&#x09;</item>
+						<item>MK10DX128VMC7&#x09;&#x09;</item>
+						<item>MK10DX256VMC7&#x09;&#x09;</item>
+						<item>MK10DX128VLQ10&#x09;&#x09;</item>
+						<item>MK10DX128VMD10&#x09;&#x09;</item>
+						<item>MK10DX256VLQ10&#x09;&#x09;</item>
+						<item>MK10DX256VMD10&#x09;&#x09;</item>
+						<item>MK10DN512VLK10&#x09;&#x09;</item>
+						<item>MK10DN512VLL10&#x09;&#x09;</item>
+						<item>MK10DN512VMC10&#x09;&#x09;</item>
+						<item>MK10DN512VLQ10&#x09;&#x09;</item>
+						<item>MK10DN512VMD10&#x09;&#x09;</item>
+						<item>MK10FX512VLQ12&#x09;&#x09;</item>
+						<item>MK10FN1M0VLQ12&#x09;&#x09;</item>
+						<item>MK10FX512VMD12&#x09;&#x09;</item>
+						<item>MK10FN1M0VMD12&#x09;&#x09;</item>
+						<item>MK11DX128VLK5&#x09;&#x09;</item>
+						<item>MK11DX256VLK5&#x09;&#x09;</item>
+						<item>MK11DN512VLK5&#x09;&#x09;</item>
+						<item>MK11DX128VMC5&#x09;&#x09;</item>
+						<item>MK11DX256VMC5&#x09;&#x09;</item>
+						<item>MK11DN512VMC5&#x09;&#x09;</item>
+						<item>MK12DX128VLF5&#x09;&#x09;</item>
+						<item>MK12DX256VLF5&#x09;&#x09;</item>
+						<item>MK12DX128VLH5&#x09;&#x09;</item>
+						<item>MK12DX256VLH5&#x09;&#x09;</item>
+						<item>MK12DN512VLH5&#x09;&#x09;</item>
+						<item>MK12DX128VLK5&#x09;&#x09;</item>
+						<item>MK12DX256VLK5&#x09;&#x09;</item>
+						<item>MK12DN512VLK5&#x09;&#x09;</item>
+						<item>MK12DX128VMC5&#x09;&#x09;</item>
+						<item>MK12DX256VMC5&#x09;&#x09;</item>
+						<item>MK12DN512VMC5&#x09;&#x09;</item>
+						<item>MK20DN32VFM5&#x09;&#x09;</item>
+						<item>MK20DX32VFM5&#x09;&#x09;</item>
+						<item>MK20DN64VFM5&#x09;&#x09;</item>
+						<item>MK20DX64VFM5&#x09;&#x09;</item>
+						<item>MK20DN128VFM5&#x09;&#x09;</item>
+						<item>MK20DX128VFM5&#x09;&#x09;</item>
+						<item>MK20DN32VLF5&#x09;&#x09;</item>
+						<item>MK20DX32VLF5&#x09;&#x09;</item>
+						<item>MK20DN64VLF5&#x09;&#x09;</item>
+						<item>MK20DX64VLF5&#x09;&#x09;</item>
+						<item>MK20DN128VLF5&#x09;&#x09;</item>
+						<item>MK20DX128VLF5&#x09;&#x09;</item>
+						<item>MK20DN32VFT5&#x09;&#x09;</item>
+						<item>MK20DX32VFT5&#x09;&#x09;</item>
+						<item>MK20DN64VFT5&#x09;&#x09;</item>
+						<item>MK20DX64VFT5&#x09;&#x09;</item>
+						<item>MK20DN128VFT5&#x09;&#x09;</item>
+						<item>MK20DX128VFT5&#x09;&#x09;</item>
+						<item>MK20DN32VLH5&#x09;&#x09;</item>
+						<item>MK20DX32VLH5&#x09;&#x09;</item>
+						<item>MK20DN64VLH5&#x09;&#x09;</item>
+						<item>MK20DX64VLH5&#x09;&#x09;</item>
+						<item>MK20DN128VLH5&#x09;&#x09;</item>
+						<item>MK20DX128VLH5&#x09;&#x09;</item>
+						<item>MK20DN32VMP5&#x09;&#x09;</item>
+						<item>MK20DX32VMP5&#x09;&#x09;</item>
+						<item>MK20DN64VMP5&#x09;&#x09;</item>
+						<item>MK20DX64VMP5&#x09;&#x09;</item>
+						<item>MK20DN128VMP5&#x09;&#x09;</item>
+						<item>MK20DX128VMP5&#x09;&#x09;</item>
+						<item>MK20DX64VLH7&#x09;&#x09;</item>
+						<item>MK20DX128VLH7&#x09;&#x09;</item>
+						<item>MK20DX256VLH7&#x09;&#x09;</item>
+						<item>MK20DX64VLK7&#x09;&#x09;</item>
+						<item>MK20DX128VLK7&#x09;&#x09;</item>
+						<item>MK20DX256VLK7&#x09;&#x09;</item>
+						<item>MK20DX128VLL7&#x09;&#x09;</item>
+						<item>MK20DX256VLL7&#x09;&#x09;</item>
+						<item>MK20DX64VMC7&#x09;&#x09;</item>
+						<item>MK20DX128VMC7&#x09;&#x09;</item>
+						<item>MK20DX256VMC7&#x09;&#x09;</item>
+						<item>MK20DN512ZCAB10&#x09;&#x09;</item>
+						<item>MK20DX128VLQ10&#x09;&#x09;</item>
+						<item>MK20DX128VMD10&#x09;&#x09;</item>
+						<item>MK20DX256VLQ10&#x09;&#x09;</item>
+						<item>MK20DX256VMD10&#x09;&#x09;</item>
+						<item>MK20DN512VLK10&#x09;&#x09;</item>
+						<item>MK20DN512VLL10&#x09;&#x09;</item>
+						<item>MK20DX256VMC10&#x09;&#x09;</item>
+						<item>MK20DN512VMC10&#x09;&#x09;</item>
+						<item>MK20DN512VLQ10&#x09;&#x09;</item>
+						<item>MK20DN512VMD10&#x09;&#x09;</item>
+						<item>MK20FX512VLQ12&#x09;&#x09;</item>
+						<item>MK20FN1M0VLQ12&#x09;&#x09;</item>
+						<item>MK20FX512VMD12&#x09;&#x09;</item>
+						<item>MK20FN1M0VMD12&#x09;&#x09;</item>
+						<item>MK21DX128VLK5&#x09;&#x09;</item>
+						<item>MK21DX256VLK5&#x09;&#x09;</item>
+						<item>MK21DN512VLK5&#x09;&#x09;</item>
+						<item>MK21DX128VMC5&#x09;&#x09;</item>
+						<item>MK21DX256VMC5&#x09;&#x09;</item>
+						<item>MK21DN512VMC5&#x09;&#x09;</item>
+						<item>MK22DX128VLF5&#x09;&#x09;</item>
+						<item>MK22DX256VLF5&#x09;&#x09;</item>
+						<item>MK22DX128VLH5&#x09;&#x09;</item>
+						<item>MK22DX256VLH5&#x09;&#x09;</item>
+						<item>MK22DN512VLH5&#x09;&#x09;</item>
+						<item>MK22DX128VLK5&#x09;&#x09;</item>
+						<item>MK22DX256VLK5&#x09;&#x09;</item>
+						<item>MK22DN512VLK5&#x09;&#x09;</item>
+						<item>MK22DX128VMC5&#x09;&#x09;</item>
+						<item>MK22DX256VMC5&#x09;&#x09;</item>
+						<item>MK22DN512VMC5&#x09;&#x09;</item>
+						<item>MK30DX64VLH7&#x09;&#x09;</item>
+						<item>MK30DX128VLH7&#x09;&#x09;</item>
+						<item>MK30DX256VLH7&#x09;&#x09;</item>
+						<item>MK30DX64VLK7&#x09;&#x09;</item>
+						<item>MK30DX128VLK7&#x09;&#x09;</item>
+						<item>MK30DX256VLK7&#x09;&#x09;</item>
+						<item>MK30DX128VLL7&#x09;&#x09;</item>
+						<item>MK30DX256VLL7&#x09;&#x09;</item>
+						<item>MK30DX64VMC7&#x09;&#x09;</item>
+						<item>MK30DX128VMC7&#x09;&#x09;</item>
+						<item>MK30DX256VMC7&#x09;&#x09;</item>
+						<item>MK30DX128VLQ10&#x09;&#x09;</item>
+						<item>MK30DX128VMD10&#x09;&#x09;</item>
+						<item>MK30DX256VLQ10&#x09;&#x09;</item>
+						<item>MK30DX256VMD10&#x09;&#x09;</item>
+						<item>MK30DN512VLK10&#x09;&#x09;</item>
+						<item>MK30DN512VLL10&#x09;&#x09;</item>
+						<item>MK30DN512VMC10&#x09;&#x09;</item>
+						<item>MK30DN512VLQ10&#x09;&#x09;</item>
+						<item>MK30DN512VMD10&#x09;&#x09;</item>
+						<item>MK40DX64VLH7&#x09;&#x09;</item>
+						<item>MK40DX128VLH7&#x09;&#x09;</item>
+						<item>MK40DX256VLH7&#x09;&#x09;</item>
+						<item>MK40DX64VLK7&#x09;&#x09;</item>
+						<item>MK40DX128VLK7&#x09;&#x09;</item>
+						<item>MK40DX256VLK7&#x09;&#x09;</item>
+						<item>MK40DX128VLL7&#x09;&#x09;</item>
+						<item>MK40DX256VLL7&#x09;&#x09;</item>
+						<item>MK40DX64VMC7&#x09;&#x09;</item>
+						<item>MK40DX128VMC7&#x09;&#x09;</item>
+						<item>MK40DX256VMC7&#x09;&#x09;</item>
+						<item>MK40DX128VLQ10&#x09;&#x09;</item>
+						<item>MK40DX128VMD10&#x09;&#x09;</item>
+						<item>MK40DX256VLQ10&#x09;&#x09;</item>
+						<item>MK40DX256VMD10&#x09;&#x09;</item>
+						<item>MK40DN512VLK10&#x09;&#x09;</item>
+						<item>MK40DN512VLL10&#x09;&#x09;</item>
+						<item>MK40DN512VMC10&#x09;&#x09;</item>
+						<item>MK40DN512VLQ10&#x09;&#x09;</item>
+						<item>MK40DN512VMD10&#x09;&#x09;</item>
+						<item>MK50DX128CLH7&#x09;&#x09;</item>
+						<item>MK50DX128CLK7&#x09;&#x09;</item>
+						<item>MK50DX256CLK7&#x09;&#x09;</item>
+						<item>MK50DX256CLL7&#x09;&#x09;</item>
+						<item>MK50DX128CMC7&#x09;&#x09;</item>
+						<item>MK50DX256CMC7&#x09;&#x09;</item>
+						<item>MK50DX256CLK10&#x09;&#x09;</item>
+						<item>MK50DX256CLL10&#x09;&#x09;</item>
+						<item>MK50DN512CLL10&#x09;&#x09;</item>
+						<item>MK50DX256CMC10&#x09;&#x09;</item>
+						<item>MK50DN512CMC10&#x09;&#x09;</item>
+						<item>MK50DN512CLQ10&#x09;&#x09;</item>
+						<item>MK50DX256CMD10&#x09;&#x09;</item>
+						<item>MK50DN512CMD10&#x09;&#x09;</item>
+						<item>MK51DX128CLH7&#x09;&#x09;</item>
+						<item>MK51DX128CLK7&#x09;&#x09;</item>
+						<item>MK51DX256CLK7&#x09;&#x09;</item>
+						<item>MK51DX256CLL7&#x09;&#x09;</item>
+						<item>MK51DX128CMC7&#x09;&#x09;</item>
+						<item>MK51DX256CMC7&#x09;&#x09;</item>
+						<item>MK51DX256CLK10&#x09;&#x09;</item>
+						<item>MK51DX256CLL10&#x09;&#x09;</item>
+						<item>MK51DN512CLL10&#x09;&#x09;</item>
+						<item>MK51DX256CMC10&#x09;&#x09;</item>
+						<item>MK51DN512CMC10&#x09;&#x09;</item>
+						<item>MK51DN256CLQ10&#x09;&#x09;</item>
+						<item>MK51DN256CMD10&#x09;&#x09;</item>
+						<item>MK51DN512CLQ10&#x09;&#x09;</item>
+						<item>MK51DN512CMD10&#x09;&#x09;</item>
+						<item>MK52DN512CLQ10&#x09;&#x09;</item>
+						<item>MK52DN512CMD10&#x09;&#x09;</item>
+						<item>MK53DN512CLQ10&#x09;&#x09;</item>
+						<item>MK53DN512CMD10&#x09;&#x09;</item>
+						<item>MK53DX256CLQ10&#x09;&#x09;</item>
+						<item>MK53DX256CMD10&#x09;&#x09;</item>
+						<item>MK60DN512ZCAB10&#x09;&#x09;</item>
+						<item>MK60DN256VLL10&#x09;&#x09;</item>
+						<item>MK60DX256VLL10&#x09;&#x09;</item>
+						<item>MK60DN512VLL10&#x09;&#x09;</item>
+						<item>MK60DN256VMC10&#x09;&#x09;</item>
+						<item>MK60DX256VMC10&#x09;&#x09;</item>
+						<item>MK60DN512VMC10&#x09;&#x09;</item>
+						<item>MK60DN256VLQ10&#x09;&#x09;</item>
+						<item>MK60DX256VLQ10&#x09;&#x09;</item>
+						<item>MK60DN512VLQ10&#x09;&#x09;</item>
+						<item>MK60DN256VMD10&#x09;&#x09;</item>
+						<item>MK60DX256VMD10&#x09;&#x09;</item>
+						<item>MK60DN512VMD10&#x09;&#x09;</item>
+						<item>MK60FX512VLQ12&#x09;&#x09;</item>
+						<item>MK60FN1M0VLQ12&#x09;&#x09;</item>
+						<item>MK60FX512VMD12&#x09;&#x09;</item>
+						<item>MK60FN1M0VMD12&#x09;&#x09;</item>
+						<item>MK60FX512VLQ15&#x09;&#x09;</item>
+						<item>MK60FN1M0VLQ15&#x09;&#x09;</item>
+						<item>MK60FX512VMD15&#x09;&#x09;</item>
+						<item>MK60FN1M0VMD15&#x09;&#x09;</item>
+						<item>MK61FX512VMD12&#x09;&#x09;</item>
+						<item>MK61FN1M0VMD12&#x09;&#x09;</item>
+						<item>MK61FX512VMJ12&#x09;&#x09;</item>
+						<item>MK61FN1M0VMJ12&#x09;&#x09;</item>
+						<item>MK61FX512VMD15&#x09;&#x09;</item>
+						<item>MK61FN1M0VMD15&#x09;&#x09;</item>
+						<item>MK61FX512VMJ15&#x09;&#x09;</item>
+						<item>MK61FN1M0VMJ15&#x09;&#x09;</item>
+						<item>MK61FN1M0CAA12&#x09;&#x09;</item>
+						<item>MK70FX512VMJ12&#x09;&#x09;</item>
+						<item>MK70FN1M0VMJ12&#x09;&#x09;</item>
+						<item>MK70FX512VMJ15&#x09;&#x09;</item>
+						<item>MK70FN1M0VMJ15</item>
+						<item>MKL02Z16VFM4</item>
+						<item>MKL02Z32CAF4R&#x09;</item>
+						<item>MKL02Z32VFM4&#x09;</item>
+						<item>MKL04Z8VFK4&#x09;&#x09;</item>
+						<item>MKL04Z16VFK4&#x09;&#x09;</item>
+						<item>MKL04Z32VFK4&#x09;&#x09;</item>
+						<item>MKL04Z8VLC4&#x09;&#x09;</item>
+						<item>MKL04Z16VLC4&#x09;&#x09;</item>
+						<item>MKL04Z32VLC4&#x09;&#x09;</item>
+						<item>MKL04Z8VFM4&#x09;&#x09;</item>
+						<item>MKL04Z16VFM4&#x09;&#x09;</item>
+						<item>MKL04Z32VFM4&#x09;&#x09;</item>
+						<item>MKL04Z16VLF4&#x09;&#x09;</item>
+						<item>MKL04Z32VLF4&#x09;&#x09;</item>
+						<item>MKL05Z8VFK4&#x09;&#x09;</item>
+						<item>MKL05Z16VFK4&#x09;&#x09;</item>
+						<item>MKL05Z32VFK4&#x09;&#x09;</item>
+						<item>MKL05Z8VLC4&#x09;&#x09;</item>
+						<item>MKL05Z16VLC4&#x09;&#x09;</item>
+						<item>MKL05Z32VLC4&#x09;&#x09;</item>
+						<item>MKL05Z8VFM4&#x09;&#x09;</item>
+						<item>MKL05Z16VFM4&#x09;&#x09;</item>
+						<item>MKL05Z32VFM4&#x09;&#x09;</item>
+						<item>MKL05Z16VLF4&#x09;&#x09;</item>
+						<item>MKL05Z32VLF4&#x09;&#x09;</item>
+						<item>MKL14Z32VFM4&#x09;&#x09;</item>
+						<item>MKL14Z64VFM4&#x09;&#x09;</item>
+						<item>MKL14Z32VFT4&#x09;&#x09;</item>
+						<item>MKL14Z64VFT4&#x09;&#x09;</item>
+						<item>MKL14Z32VLH4&#x09;&#x09;</item>
+						<item>MKL14Z64VLH4&#x09;&#x09;</item>
+						<item>MKL14Z32VLK4&#x09;&#x09;</item>
+						<item>MKL14Z64VLK4&#x09;&#x09;</item>
+						<item>MKL15Z32VFM4&#x09;&#x09;</item>
+						<item>MKL15Z64VFM4&#x09;&#x09;</item>
+						<item>MKL15Z128VFM4</item>
+					</content>
+				</object>
+				<flag>wxALL|wxEXPAND|wxALIGN_LEFT|wxALIGN_TOP</flag>
+				<border>3</border>
+			</object>
+			<object class="sizeritem">
+				<object class="wxCheckBox" name="checkboxLibrary">
+					<label>This is a library project</label>
+					<tooltip>The project will generate a library (.a) file as output which can be used in other projects.&#x0A;&#x0A;It is possible to include a library  project in a workspace with multiple projects and to set dependencies&#x0A;to a library project. This insures that everything will keep in sync when a depending project is build </tooltip>
+				</object>
+				<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxBoxSizer">
+					<object class="sizeritem">
+						<object class="wxStaticText" name="ID_STATICTEXT2">
+							<label>Stack size</label>
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxTextCtrl" name="textctrlStack">
+							<value>0x0100</value>
+							<tooltip>This value will be passed as ____STACK__SIZE</tooltip>
+						</object>
+						<flag>wxALL|wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL</flag>
+						<border>3</border>
+						<option>1</option>
+					</object>
+				</object>
+				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxBoxSizer">
+					<object class="sizeritem">
+						<object class="wxStaticText" name="ID_STATICTEXT1">
+							<label>Heap size</label>
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxTextCtrl" name="textctrlHeap">
+							<value>0x0000</value>
+							<tooltip>This value will be passed as ____HEAP__SIZE</tooltip>
+						</object>
+						<flag>wxALL|wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL</flag>
+						<border>3</border>
+						<option>1</option>
+					</object>
+				</object>
+				<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxCheckBox" name="checkboxHex">
+					<label>Create hex file (.hex)</label>
+					<tooltip>Create Intel hex files from the .elf output file</tooltip>
+				</object>
+				<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxCheckBox" name="checkboxTargetLvl">
+					<label>Set device settings at target level </label>
+					<tooltip>Default all the device settings are set at project level and the targets device policy is set at &apos;Use project settings&apos;.&#x0A;&#x0A;With this option checked the device settings are set at target level with the policy &apos;Use target settings&apos;&#x0A;If you have multiple target with different device settings, please use this option.</tooltip>
+				</object>
+				<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+		</object>
+	</object>
+</resource>

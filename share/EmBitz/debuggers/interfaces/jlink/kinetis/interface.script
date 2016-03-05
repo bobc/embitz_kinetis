@@ -1,0 +1,161 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+// EmBitz NXP-Kinetis Segger J-Link debug interface script
+//
+// (fixed little endianness)
+//
+////////////////////////////////////////////////////////////////////////////////
+
+
+///////////////////////////////////////////////////////////////////////
+//
+//   This function is called before the settings dialog is presented
+//   you can set all the default values and set the pages to use for
+//   this interface (no particular order).
+//
+function InitSettingsDialog()
+{
+    // Set all the default values in case of a new project
+    //
+    // Syntax:   settingsDlg.SetValue( xrc_id, value, forceUpdate);
+    //
+
+    settingsDlg.SetValue(_T("ID_IP_ADDRESS"), _T("localhost"), false);
+    settingsDlg.SetValue(_T("ID_IP_PORT"),    _T("2331"),      false);
+
+    // We are defaulting to the reg key of Segger with the "InstallPath" attribute.
+    // The HKCU and HKLM are searched, any addition after the last '%' will be add to the
+    // path (e.g.  %Software\\SEGGER\\J-Link:InstallPath%\\.\\examples\\dbgscript )
+    settingsDlg.SetValue(_T("ID_PATH"), _T("%Software\\SEGGER\\J-Link:InstallPath%"), false);
+    settingsDlg.SetValue(_T("ID_EXEC"), _T("JLinkGDBServer.exe"), false);
+
+    // Default 2 seconds backoff time after connect
+    settingsDlg.SetValue(_T("ID_BACKOFF_TIME"), _T("2000"), false);
+
+    // This is optional, if there is no help then skip this so that the help
+    // button is hidden for the user.
+    //! settingsDlg.SetValue(_T("ID_HELP_URL"), _T("http://www.embitz.com/online_help/help.php?id=interfacing&branch=jlink&fam=atmel&v=1"), false);
+
+    settingsDlg.SetValue(_T("ID_DEVICE"), _T(""), false);
+    settingsDlg.SetValue(_T("ID_JTAG_SWD"), _T("SWD"), false);
+    settingsDlg.SetValue(_T("ID_SPEED"), _T("1000"), false);
+    settingsDlg.SetValue(_T("ID_AUTO_SPEED"), _T("1"), false);
+    settingsDlg.SetValue(_T("ID_ENDIANNESS"), _T("little"), true); //Fixed little endian
+    settingsDlg.SetValue(_T("ID_RESET_TYPE"), _T("0"), false);
+    settingsDlg.SetValue(_T("ID_VECTOR_START"), _T("0x00000000"), false);
+    settingsDlg.SetValue(_T("ID_LOAD_PROGRAM"), _T("1"), false);
+    settingsDlg.SetValue(_T("ID_FLASH_DOWNLOAD"), _T("1"), false);
+    settingsDlg.SetValue(_T("ID_FLASH_BREAK"), _T("1"), false);
+    settingsDlg.SetValue(_T("ID_RAM_EXEC"), _T("0"), false);
+    settingsDlg.SetValue(_T("ID_VEC_TABLE"), _T("1"), false);
+}
+
+//////////////////////////////////////////////////////////////////////
+//
+//  This function is called just before the debugging starts. Here you
+//  will set all the commands which must be used to initialize the
+//  debugger and interface (GDB server) and also the reset command which
+//  the debugger front-end (EmBitz) must use.
+//
+function InitDebugSession()
+{
+    local string = ::wxString(); // our local wxString instance
+
+    // We have to disable the active close every session because it's turned on per default.
+    // We use the '-s' option at the segger commandline so that it will terminate if the
+    // connection is lost. This will prevent a lot of tray icons which are otherwise not cleaned up.
+    dbginterface.SetValue(_T("ID_SERVER_ACTIVE_CLOSE"), _T("0") );
+
+    //===========================================================================
+    //==========                      Reset command
+
+    string   = _T("monitor reset\n");
+
+    string.Add(_T("monitor speed "));
+
+    if( dbginterface.GetValue(_T("ID_AUTO_SPEED")).Matches(_T("0")) )
+        string.Add( dbginterface.GetValue(_T("ID_SPEED")) );
+    else
+        string.Add( _T("auto") );
+    string.Add(_T("\n"));
+
+    dbginterface.SetResetCommands(string);
+
+
+    //===========================================================================
+    //==========                  Before connect command
+    string = _T("");
+    dbginterface.SetBeforeConnectCommands(string);
+
+
+    //===========================================================================
+    //==========               command line arguments
+
+    string = _T("-s");
+    string.Add( _T(" -device "));
+    string.Add( dbginterface.GetValue(_T("ID_DEVICE")) );
+    string.Add( _T(" -speed ") );
+    if( dbginterface.GetValue(_T("ID_AUTO_SPEED")).Matches(_T("0")) )
+        string.Add( dbginterface.GetValue(_T("ID_SPEED")) );
+    else
+        string.Add( _T("auto") );
+
+    string.Add( _T(" -endian little") ); // NXP has fixed little endian devices
+    string.Add( _T(" -if ") );
+    string.Add( dbginterface.GetValue(_T("ID_JTAG_SWD")) );
+    dbginterface.SetServerArguments(string);
+
+    //===========================================================================
+    //==========                  After connect command
+
+    string = _T("");
+
+    // Enable flash downloading
+    string.Add( _T("monitor flash download = ") );
+    string.Add( dbginterface.GetValue(_T("ID_FLASH_DOWNLOAD")) + _T("\n") );
+
+    // Disable intruction set simulation, it doesn't work reliable
+    string.Add( _T("monitor AllowSimulation 0 \n") );
+
+    // Enable flash breakpoints
+    string.Add( _T("monitor flash breakpoints = ") );
+    string.Add( dbginterface.GetValue(_T("ID_FLASH_BREAK")) + _T("\n") );
+
+    // Check for non-cacheable region
+    if ( ( dbginterface.GetValue(_T("ID_NCACHE_CHECK")).Matches(_T("1"))  ) &&
+            ( dbginterface.GetValue(_T("ID_NCACHE_BASE")).IsEmpty() == false ) &&
+            ( dbginterface.GetValue(_T("ID_NCACHE_LENGTH")).IsEmpty() == false ) )
+    {
+        string.Add( _T("monitor ExcludeFlashCacheRange "));
+        string.Add( dbginterface.GetValue(_T("ID_NCACHE_BASE")) +_(",") );
+        string.Add( dbginterface.GetValue(_T("ID_NCACHE_LENGTH")) +_("\n") );
+    }
+
+    // Semihosting settings
+    if ( dbginterface.GetValue(_T("ID_SEMIHOST_CHECK")).Matches(_T("1") ) )
+    {
+        string.Add( _T("monitor semihosting enable\n"));
+        //string.Add( _T("monitor semihosting IOClient = 2\n"));
+
+        if( dbginterface.GetValue(_T("ID_ARM_SWI")).IsEmpty() == false )
+        {
+            string.Add( _T("monitor semihosting ARMSWI "));
+            string.Add( dbginterface.GetValue(_T("ID_ARM_SWI")) +_("\n") );
+        }
+
+        if( dbginterface.GetValue(_T("ID_THUMB_SWI")).IsEmpty() == false )
+        {
+            string.Add( _T("monitor semihosting ThumbSWI "));
+            string.Add( dbginterface.GetValue(_T("ID_THUMB_SWI")) +_("\n") );
+        }
+    }
+
+    // Some additional commands to make things more stable
+
+    // Load the actual file
+    if( dbginterface.GetValue(_T("ID_LOAD_PROGRAM")).Matches(_T("1")) )
+        string.Add( _T("load\n") );
+
+    dbginterface.SetAfterConnectCommands(string);
+}
+
